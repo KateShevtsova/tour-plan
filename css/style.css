@@ -401,6 +401,10 @@ template {
   color: #333333;
 }
 
+.search__input:active, .search__input:focus, .search__input:hover {
+  outline: none;
+}
+
 .search__button {
   position: absolute;
   top: 0;
