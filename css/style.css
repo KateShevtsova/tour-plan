@@ -954,7 +954,7 @@ template {
 }
 
 @media (max-width: 768px) {
-  .container {
+  .container, .newsletter-wrapper {
     max-width: 576px;
     width: 92%;
   }
@@ -1017,7 +1017,7 @@ template {
     margin-left: 0;
   }
   .newsletter-wrapper {
-    max-width: 576px;
+    max-width: 700px;
     width: 92%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1030,11 +1030,23 @@ template {
 }
 
 @media (max-width: 576px) {
+  .container, .newsletter-wrapper {
+    max-width: 320px;
+    width: 92%;
+  }
   .logo {
     width: 99px;
   }
   .newsletter {
     padding: 76px 0 83px 0;
+  }
+  .newsletter-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .newsletter-title__strong {
+    font-size: 30px;
+    line-height: 38px;
   }
   .newsletter__title {
     margin-bottom: 37px;
