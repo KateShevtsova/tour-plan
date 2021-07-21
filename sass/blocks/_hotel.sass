@@ -1,44 +1,43 @@
 .hotel
-  padding-top: 23px
-  padding-bottom: 70px
+  margin-top: 20px
+  margin-bottom: 70px
   &-info
     display: flex
     align-items: center
     justify-content: space-between
     padding-bottom: 20px
-    &__offer
-      margin-left: 14px
-      margin-top: 4px  
-    &__name
-      margin-top: 4px
-      margin-bottom: 0
     &__description
-      margin: 5px 0
-
-  &-name
-    font-size: 24px 
-    line-height: 30px
+      font-size: 12px
+      line-height: 15px
+      margin: 0
+    &__offer
+      font-weight: bold
+      margin-left: 14px
+      margin-top: 4px
+    &__name
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 24px
+      line-height: 30px
   &-wrapper
     display: flex
     flex-wrap: wrap
     align-items: center
-  &-description
-    font-size: 12px
-    line-height: 15px
-    margin: 0
   &-grid
     display: flex
-    justify-content: space-between   
-  &-right
+    justify-content: space-between
+  &-price-map
     display: flex
     flex-direction: column
     justify-content: space-between
-  &__slider
-    margin-left: 0
-    margin-right: 30px
-  &-slider      
+  &-slider
     width: 728px
     height: 450px
+    margin-left: 0
+    &__image
+      height: 100%
+      width: 100%
+      object-fit: cover
     &__item
       width: 100%
       height: 100%
@@ -46,24 +45,25 @@
       border-radius: 8px
       overflow: hidden
       &::after
-        content: '' 
+        content: ''
         position: absolute
         width: 100%
         height: 100%
         top: 0
         bottom: 0
-        left: 0
         right: 0
+        left: 0
         background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
         z-index: 10
-    &__button 
+    &__button
       position: absolute
       top: 50%
       transform: translateY(-50%)
       z-index: 99
       width: 30px
-      height: 30px 
+      height: 30px
       border: none
+      outline: none
       cursor: pointer
       background-repeat: no-repeat
       background-position: center
@@ -77,6 +77,8 @@
         background-image: url(../img/arrow-prev.svg)
 .stars
   flex-basis: 100%
+.stars img
+  width: 6px
 .offer
   font-size: 10px
   line-height: 13px
@@ -92,23 +94,30 @@
   background-color: $primary
   border-radius: 4px
   &__text
+    font-weight: bold
     font-size: 8px
     line-height: 10px
   &__counter
+    font-weight: bold
     font-size: 14px
     line-height: 18px
-  &__full
-    font-size: 11px
-    line-height: 13px
+.rating
+  &__counter span
+    font-size: 12px
+.swiper
+  &-slide
+    &__image
+      height: 100%
 .booking
   background-color: $dark
   color: $light
   border-radius: 8px
   width: 350px
-  min-height: 210px
-  padding: 28px
+  max-height: 210px
+  padding: 29px 29px 26px 26px
   &__info
     display: flex
+    align-items: center
     justify-content: space-between
     margin-bottom: 9px
   &__price
@@ -119,21 +128,21 @@
     font-size: 10px
     line-height: 14px
   &__pricetag
+    font-style: normal
     font-weight: 800
     font-size: 24px
     line-height: 33px
   &__per-room
-    font-style: normal
+    font-weight: normal
     font-weight: normal
     font-size: 12px
-    line-height: 16px
-  &__room
-    margin-top: 4px  
+    line-height: 13px
   &__text
     display: flex
     align-items: center
     justify-content: space-between
     margin-bottom: 8px
+    min-width: 80px
     font-style: normal
     font-weight: normal
     font-size: 12px
@@ -142,8 +151,8 @@
     margin-left: 9px
   &__call-center
     display: flex
-    justify-content: space-between
     align-items: center
+    justify-content: space-between
     margin-bottom: 17px
   &__heading
     font-style: normal
@@ -154,11 +163,12 @@
     display: flex
     align-items: center
     justify-content: space-between
-    color: inherit
-    text-decoration: none
+    font-style: normal
     font-weight: 600
     font-size: 18px
     line-height: 25px
+    text-decoration: none
+    color: inherit
   &__num
     margin-left: 8px
   &__button
@@ -168,23 +178,15 @@
     font-size: 14px
     line-height: 19px
     border-radius: 4px
-    background-color: $primary
     border: none
+    background-color: $primary
     color: $light
     cursor: pointer
-.map
+    padding: 13px
+.google-map
   width: 347px
   height: 213px
   border-radius: 10px
-  overflow: hidden //все, что вываливается за пределы, скрывается
-
-
-
-
-
-
-
-    
-
-
-
+  overflow: hidden
+.swiper-container
+  margin-left: 0
