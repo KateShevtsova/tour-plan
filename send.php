@@ -8,7 +8,7 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$email = $_POST['email'];
+
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour plan";
@@ -17,7 +17,7 @@ $body = "
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
 <b>Сообщение:</b><br>$message
-<b>Подписка:</b><br>$email
+
 
 ";
 
@@ -27,19 +27,19 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    $mail->SMTPDebug = 2;
+    //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'ssl://smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'shestakova.kira946@gmail.com'; // Логин на почте
-    $mail->Password   = 'mailforproject'; // Пароль на почте
+    $mail->Username   = 'shevtsova1990ekaterina@gmail.com'; // Логин на почте
+    $mail->Password   = 'FQdtyuj()'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('shestakova.kira946@gmail.com', 'Kira Shestakova'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('shevtsova1990ekaterina@gmail.com', 'Екатерина Шевцова'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('shestakova.kira946@gmail.com');  
+    $mail->addAddress('tackhizis@gmail.com');  
      // Ещё один, если нужен
 
    

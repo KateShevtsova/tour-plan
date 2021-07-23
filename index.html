@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
@@ -27,7 +27,7 @@
               class="logo__image"
             />
           </a>
-          <form action="#" class="search navbar__search">
+          <form action="#" class="search navbar__search navbar__search--mobile_hidden">
             <input
               type="text"
               class="search__input"
@@ -37,13 +37,13 @@
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
-          <a href="#" class="user navbar__user">
+          <a href="#" class="user navbar__user navbar__user--mobile_hidden">
             <img
               src="img/user-avatar.jpg"
               alt="avatar: Nathan"
               class="user__avatar"
             />
-            <span class="user__name">Nathan</span> </a
+            <span class="user__name user__name--light">Nathan</span> </a
           ><!-- /.user -->
           <button class="menu-button navbar-top__menu-button">
             <span class="menu-button__line"></span>
@@ -57,6 +57,28 @@
       <div class="navbar-bottom">
         <div class="container">
           <ul class="navbar-menu">
+            <li class="navbar-menu__item navbar-menu__item--mobile_visible">
+              <a href="#" class="user navbar__user navbar__user--mobile_visible">
+                <img
+                  src="img/user-avatar.jpg"
+                  alt="avatar: Nathan"
+                  class="user__avatar"
+                />
+                <span class="user__name">Nathan</span> 
+              </a><!-- /.user -->
+            </li>
+            <li class="navbar-menu__item navbar-menu__item--mobile_visible">  
+              <form action="#" class="search navbar__search navbar__search--mobile_visible">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search Location"
+                />
+                <button class="search__button">
+                  <img src="img/search.svg" alt="Icon: search" />
+                </button>
+              </form>
+            </li>
             <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">All Deals</a>
             </li>
@@ -461,7 +483,7 @@
               alt="The curious corner of chamarel"
               class="card__image"
             />
-              <h3 class="card__title">The curious corner of chamarel варварварыварварвsdghsdfjsfgjfgjfsgjfgjnfcgjxfgjfgар</h3>
+              <h3 class="card__title">The curious corner of chamarel</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card1 -->
@@ -472,7 +494,7 @@
               alt="Gymkhana club golf course"
               class="card__image"
             />
-            <h3 class="card__title">Gymkhana club golf course sdfsdfklsdfklsafiapifkjpa;sofj;aslkfja;sofjpafsojapsoifjaps</h3>
+            <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card2 -->
@@ -622,20 +644,89 @@
             <!-- /.footer__contact-details -->
             <div class="footer__contact-form">
               <h3 class="footer__title footer-title--mb-3">SEND US A MESSAGE</h3>
-              <form action="#" class="footer__form">
-                <input type="text" class="input footer__input" placeholder="Your Full Name*">
-                <input type="text" class="input footer__input" placeholder="Phone Number*">
-                <textarea class="footer__message"  cols="30" rows="10" placeholder="Message"></textarea>
+              <form action="send.php" method="POST" class="footer__form">
+                <input 
+                  type="text" 
+                  class="input footer__input" 
+                  placeholder="Your Full Name*"
+                  name="name"
+                >
+                <input 
+                  type="text" 
+                  class="input footer__input" 
+                  placeholder="Phone Number*"
+                  name="phone"
+                >
+                <textarea 
+                  class="footer__message" 
+                  placeholder="Message"
+                  name="message"
+                ></textarea>
                 <button class="button footer__button" type="submit">Send</button>  
                 <span class="footer__info">* Required Fields</span>
               </form>
             </div>
             <!-- /.footer__contact-form -->
+            <div class="footer__list footer__bottom">
+              <ul class="footer__ul footer__ul--bottom">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Disclaimer</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Conditions of use</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Cancellation policy</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.footer__list footer__bottom-->
+            <div class="footer__pay">
+              <img
+                src="img/pay.svg"
+                alt="Logo: ways of payment"
+                class="footer__pay--image"
+              />
+            </div>
+            <!-- /.footer__pay -->
         </div>
         <!-- /.footer-wrapper -->
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="icon: close">
+        </a>
+        <h3 class="footer__title footer-title--mb-3">SEND US A MESSAGE</h3>
+        <form action="send.php" method="POST" class="footer__form">
+          <input 
+            type="text" 
+            class="input footer__input" 
+            placeholder="Your Full Name*"
+            name="name"
+          >
+          <input 
+            type="text" 
+            class="input footer__input" 
+            placeholder="Phone Number*"
+            name="phone"
+          >
+          <textarea 
+            class="footer__message" 
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <button class="button footer__button" type="submit">Send</button>  
+          <span class="footer__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
