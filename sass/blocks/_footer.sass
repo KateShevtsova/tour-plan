@@ -21,10 +21,11 @@
       align-items: center
       min-width: 83px
       justify-content: space-between
+      &:hover
+        color: #fff
     &-network
       display: flex
       align-content: start
-      
       grid-row: 2 / 4
       grid-column: span 2
   &__contact
@@ -37,20 +38,21 @@
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
+  &__list
 
   &__ul
     padding: 0
     margin: 0
     list-style: none
-    &--bottom
-      display: flex
-      align-items: center
-      justify-content: center
-    &--phonenumber
-      list-style: none
-      margin: 0
-      padding: 0
-      
+    
+  &__phonenumber
+    display: inline-block
+    color: $footer-text-color
+    margin: 0
+    font-size: 14px
+  
+    
+        
   &__title
     font-style: normal
     font-weight: bold
@@ -83,6 +85,12 @@
   &__link
     text-decoration: none
     color: inherit
+    &:hover
+      color: #fff
+      
+    &-wrapper
+      display: grid
+      grid-template-rows: repeat(3, 23px)
   &__input
     margin-bottom: 15px
     flex-basis: 48%
@@ -91,27 +99,41 @@
   &__message
     flex-basis: 100%
     margin-bottom: 23px
+    height: 123px
     &:active, &:hover, &:focus 
       outline: none
+    
+  
   &__info
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: $footer-text-color
-  &__bottom
-    display: grid
-    grid-column: 2 / 4
-  &__pay
-    grid-column: 4 / 5
-    right: 0
-    &--image
+  &-bottom
+    display: flex
+    justify-content: flex-end
+    margin-top: 95px
+    &__ul
+      list-style: none
+      display: flex
+      justify-content: center
+      transform: translate(-100%)
+    &__item
+      display: inline-block
+      margin-right: 15px
+    &__image
       display: flex
       justify-content: flex-end
-  &__phonenumber
-    margin: 0
-    &:hover
-      color: #fff
+    &__link
+      text-decoration: none
+      color: $footer-text-color
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+ 
+  
 
 
 
