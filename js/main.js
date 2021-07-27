@@ -44,12 +44,6 @@ $(document).ready(function () {
     );
   });
 
-  // паралакс для newsletter
-  $(".newsletter").parallax({
-    imageSrc: "./img/newsletter-bg.jpg",
-    speed: 0.3,
-  });
-
   var menuButton = $(".menu-button");
   menuButton.on("click", function () {
     $(".navbar-bottom").toggleClass("navbar-bottom--visible");
@@ -114,9 +108,15 @@ $(document).ready(function () {
     $(this).mask("+7 (999) 999-99-99", {
       translation: {
         9: {
-          pattern: [0 - 9],
+          pattern: /[0-9*]/,
         },
       },
     });
   });
 });
+
+// паралакс для newsletter
+//  $(".newsletter").parallax({
+//   imageSrc: "./img/newsletter-bg.jpg",
+//   speed: 0.3,
+// });

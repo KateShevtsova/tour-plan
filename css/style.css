@@ -1211,6 +1211,10 @@ template {
   padding-bottom: 46px;
 }
 
+.footer__ul {
+  padding-left: 0;
+}
+
 .footer-wrapper {
   display: -ms-grid;
   display: grid;
@@ -1618,6 +1622,9 @@ template {
   }
   .other-hotels__image--1, .other-hotels__booking--1 {
     width: 320px;
+  }
+  .footer__ul {
+    padding-left: 0;
   }
   .footer-wrapper {
     -ms-grid-columns: 1.3fr 0.9fr 1.4fr 1.1fr;
