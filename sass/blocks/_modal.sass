@@ -1,35 +1,40 @@
 .modal
+  &__form
+    margin-bottom: 33px
+    &-wrapper
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
   &__overlay
+    visibility: hidden
     position: fixed
     left: 0
-    top: 0
-    right: 0  
+    right: 0
     bottom: 0
+    top: 0
     background-color: rgba(0, 143, 223, 0.39)
     z-index: 100
-    visibility: hidden
-    opacity: 0
-    transition: 0.2s
-    &--visible
+    transition: opacity 0.2s
+    &--active
       visibility: visible
-      opacity: 1
   &__dialog
+    visibility: hidden
     position: fixed
+    padding: 33px 88px 0
+    max-width: 478px
+    max-height: 90%
     top: 50%
     left: 50%
-    max-width: 478px
-    padding: 33px 88px
+    transform: translate(-50%, -50%)
     background-color: $dark
-    transform:  translate(-50%, -50%)
     color: $light
     border-radius: 8px
     z-index: 101
-    visibility: hidden
-    opacity: 0
-    transition: 0.2s
-    &--visible
+    transition: opacity 0.2s
+    overflow-y: auto
+    &--active
       visibility: visible
-      opacity: 1
   &__close
     position: absolute
     right: 18px
@@ -37,40 +42,55 @@
     text-decoration: none
     cursor: pointer
   &__title
-    font-style: normal
-    font-weight: bold
+    text-transform: uppercase
     font-size: 18px
     line-height: 23px
+    font-weight: bold
     margin-bottom: 15px
-    text-transform: uppercase
     text-align: center
-  &__input  
+  &__input
+    background-color: $light
+    border-radius: 4px
+    border: none
     width: 100%
-    margin-bottom: 15px
+    min-width: 302px
+    height: 50px
+    padding: 0 23px
+    font-size: 12px
+    line-height: 15px
+    margin-top: 15px
+    outline: none
+    &:first-child
+      margin-top: 0
   &__message
+    background-color: $light
     width: 100%
-    min-height: 123px
+    min-width: 302px
+    border-radius: 4px
+    padding: 18px 23px
+    border: none
     margin-bottom: 15px
+    margin-top: 15px
+    resize: none
+    height: 123px
+    font-size: 12px
+    line-height: 15px
+    outline: none
+    overflow-y: auto
+  &__button
+    font-size: 12px
+    line-height: 15px
+    font-weight: bold
+    min-width: 160px
+    min-height: 50px
+    background-color: $primary
+    border-radius: 4px
+    color: $light
   &__info
-    font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
-    color: $footer-text-color
-  &__form
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-  
-
-
-
-
-
-
-
-
-
-
-
+  &__icon
+    fill: $light
+    width: 17px
+    height: 16px
