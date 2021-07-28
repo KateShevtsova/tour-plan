@@ -59,11 +59,6 @@ $(document).ready(function () {
   var closeModalButton = $(".modal__close");
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
-  $(document).keydown(function (press) {
-    if (press.key === "Escape" || e.keyCode === 27) {
-      closeModal(press);
-    }
-  });
 
   function openModal() {
     var modalOverlay = $(".modal__overlay");
@@ -114,10 +109,5 @@ $(document).ready(function () {
       },
     });
   });
+  AOS.init();
 });
-
-// паралакс для newsletter
-//  $(".newsletter").parallax({
-//   imageSrc: "./img/newsletter-bg.jpg",
-//   speed: 0.3,
-// });

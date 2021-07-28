@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -139,14 +140,45 @@
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
               <div class="stars">
-                <img src="img/star.svg" alt="star " />
-                <img src="img/star.svg" alt="star " />
-                <img src="img/star.svg" alt="star " />
-                <img src="img/star.svg" alt="star " />
-                <img src="img/star.svg" alt="star " />
+                <img
+                  src="img/star.svg"
+                  alt="star "
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1500"
+                />
+                <img
+                  src="img/star.svg"
+                  alt="star "
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1700"
+                />
+                <img
+                  src="img/star.svg"
+                  alt="star "
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1900"
+                />
+                <img
+                  src="img/star.svg"
+                  alt="star "
+                  data-aos="zoom-in-down"
+                  data-aos-duration="2100"
+                />
+                <img
+                  src="img/star.svg"
+                  alt="star "
+                  data-aos="zoom-in-down"
+                  data-aos-duration="2300"
+                />
               </div>
               <!-- /.stars -->
-              <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
+              <h1
+                class="hotel-name hotel-info__name"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+              >
+                GRAND HILTON HOTEL
+              </h1>
               <span class="offer hotel-info__offer">Flash Offer</span>
             </div>
             <!-- /.hotel-wrapper -->
@@ -156,11 +188,7 @@
             </p>
           </div>
           <!-- /.hotel-info__text -->
-          <div
-            data-toggle="modal"
-            data-href="#rating-modal"
-            class="rating hotel-info__rating"
-          >
+          <div class="rating hotel-info__rating">
             <span class="rating__text">User Rattings</span>
             <span class="rating__counter">4.5/</span
             ><span class="rating__full">5</span>
@@ -300,11 +328,17 @@
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form
+          action="send.php"
+          method="POST"
+          class="subscribe newsletter__subscribe"
+        >
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
+            name="email"
+            required
           />
           <button class="subscribe__button">Send</button>
         </form>
@@ -498,7 +532,9 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button type="button" data-toggle="modal" class="card__button">
+              Book Now
+            </button>
           </div>
           <!-- /.card1 -->
 
@@ -509,7 +545,9 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button type="button" data-toggle="modal" class="card__button">
+              Book Now
+            </button>
           </div>
           <!-- /.card2 -->
 
@@ -520,7 +558,9 @@
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button type="button" data-toggle="modal" class="card__button">
+              Book Now
+            </button>
           </div>
           <!-- /.card3 -->
 
@@ -531,7 +571,9 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button type="button" data-toggle="modal" class="card__button">
+              Book Now
+            </button>
           </div>
           <!-- /.card4 -->
         </div>
@@ -543,7 +585,12 @@
       <div class="container">
         <div class="footer-wrapper">
           <a class="logo footer__logo" href="#">
-            <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" />
+            <img
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+              src="img/vertical-logo.svg"
+              alt="Logo: Best Tour Plan"
+            />
           </a>
 
           <div class="footer__list footer__categories">
@@ -659,6 +706,8 @@
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
+                    data-aos="zoom-in-right"
+                    data-aos-delay="100"
                     class="footer__icon"
                     src="img/map-marker.svg"
                     alt="icon: map"
@@ -670,6 +719,8 @@
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
+                    data-aos="zoom-in-right"
+                    data-aos-delay="200"
                     class="footer__icon"
                     src="img/phone-call.svg"
                     alt="icon: phone"
@@ -704,6 +755,8 @@
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
+                    data-aos="zoom-in-right"
+                    data-aos-delay="300"
                     class="footer__icon"
                     src="img/email.svg"
                     alt="icon: email"
@@ -840,6 +893,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

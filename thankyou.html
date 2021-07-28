@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -143,10 +143,12 @@
         </div>
         <!-- /.hotel-info -->
         <div class="hotel__back">
-            <button class="">
-              <img class="left-arrow" src="img/left-arrow.svg" alt="">
-              Назад
+            <a href="index.html" class="">
+              <button class="btn-return">
+               <img class="left-arrow" src="img/left-arrow.svg" alt="">
+               <span class="return">Назад</span>
             </button>
+            </a>
           </div>
       </div>
       <!-- /.container -->
@@ -159,6 +161,7 @@
             src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
             class="logo footer__logo"
+            data-aos="zoom-in"
           />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>

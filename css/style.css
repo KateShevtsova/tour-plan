@@ -48,9 +48,34 @@ img {
   cursor: pointer;
 }
 
+.btn-return {
+  min-width: 140px;
+  min-height: 30px;
+  padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.return {
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
 .invalid {
   color: #EC1F46;
   border-bottom: 1px #EC1F46;
+}
+
+.left-arrow {
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
