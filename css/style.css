@@ -1651,6 +1651,12 @@ template {
   .modal__button {
     min-width: 120px;
   }
+  .modal__input {
+    min-width: 250px;
+  }
+  .modal__message {
+    min-width: 250px;
+  }
 }
 
 @media (min-width: 992px) {

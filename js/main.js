@@ -81,6 +81,7 @@ $(document).ready(function () {
     var modalBody = $("body");
     modalOverlay.removeClass("modal__overlay--active");
     modalDialog.removeClass("modal__dialog--active");
+
     modalBody.removeClass("modal-open");
   }
 
