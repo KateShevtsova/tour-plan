@@ -740,17 +740,30 @@
       display: none
     &__user
       display: none
-  .breadcrumb-list
-    padding: 25px 0 18px
+  .breadcrumb
+    &-list
+      padding: 83px 0 0 4px
+       
   .hotel
-    margin-top: 0
+    margin-top: 18px
+    margin-left: 9px
+    margin-bottom: 0 !important
     &-info
       padding-bottom: 38px
     &__slider
       margin-bottom: 20px
+  .google-map__image 
+    height: 173px
+    border-radius: 10px
+    overflow: hidden
   .newsletter
-    height: 200px
+    height: 319px
     padding: 0
+    margin-top: -8px
+    &-title
+      margin-top: 76px
+      &__strong
+        margin-top: 8px
   .other-hotels
     padding-top: 30px
     padding-bottom: 50px
@@ -811,7 +824,7 @@
     font-size: 12px
     line-height: 14px
   .reviews
-    padding-top: 84px
+    padding-top: 45px
     &__title
       padding-left: 7px
       
@@ -827,8 +840,8 @@
         &--next
           right: 42%
   .activities
-    padding-top: 40px
-    padding-bottom: 40px
+    padding-top: 27px
+    padding-bottom: 34px
     &__title
       font-size: 18px
       line-height: 23px
@@ -841,18 +854,50 @@
     padding-top: 66px
     &-wrapper
       grid-row-gap: 25px
+    &__link
+      &-wrapper
+        grid-template-rows: 40px 37px 40px
     &__additional
-      margin-bottom: 10px
+      margin: -10px 0 10px 8px
     &__categories
-      margin-bottom: 10px
+      margin: -23px 0 10px 8px
     &__text
       margin-bottom: 30px
+      display: inline-block
+      max-width: 270px
+      margin-bottom: 8px
+    &__item
+      max-width: 280px
     &__contact-details
-      margin-bottom: 4px
-    &__title--message
-      margin-bottom: 17px
+      margin: -10px 0 10px 8px
+    &__title
+      margin-top: 0
+      &--form
+        margin-left: 5px
+      &--message
+        margin-bottom: 17px
     &__message
       margin-bottom: 16px
+    &__social
+      &-network
+        margin-left: 6px
+        margin-top: 18px
+    &__legal 
+      margin-left: 8px
+      margin-top: 3px
+    &__form
+      max-width: 280px
+      margin-left: 8px
+      margin-top: -18px
+      &-wrapper
+        flex-direction: column
+        align-items: flex-start
+    &-disclaimer
+      margin-left: 8px
+      &__link
+        font-size: 11px
+      &__ul
+        margin: 0
   .second-tel
     margin: 0
   .third-tel
