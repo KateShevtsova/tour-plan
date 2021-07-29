@@ -28,22 +28,6 @@ $(document).ready(function () {
     },
   });
 
-  var mapStyle = $(".map"),
-    mapWidth = mapStyle.css("width"),
-    mapHeight = mapStyle.css("height");
-  $(".show-map-on-click").click(function () {
-    var map = $(this).attr("data-map");
-    $(this).html(
-      '<iframe src="' +
-        map +
-        '" width="' +
-        mapWidth +
-        '" height="' +
-        mapHeight +
-        '" frameborder="0" style="border:0" allowfullscreen></iframe>'
-    );
-  });
-
   var menuButton = $(".menu-button");
   menuButton.on("click", function () {
     $(".navbar-bottom").toggleClass("navbar-bottom--visible");
