@@ -45,6 +45,7 @@ $(document).ready(function () {
   closeModalButton.on("click", closeModal);
 
   function openModal() {
+    document.querySelector("body").classList.add("hidden");
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
     var modalBody = $("body");
@@ -54,6 +55,7 @@ $(document).ready(function () {
   }
 
   function closeModal(event) {
+    document.querySelector("body").classList.remove("hidden");
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
