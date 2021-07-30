@@ -280,6 +280,7 @@
           display: none
         &_visible 
           display: flex
+          margin: auto
     &-bottom
       display: none 
       position: fixed
@@ -297,6 +298,7 @@
         &--mobile
           &_visible
             display: flex
+            width: 40%
     &__user
       flex-direction: column  
       justify-content: center       
@@ -343,7 +345,7 @@
   .user
     &-avatar
       margin-bottom: 10px
-    &-name
+    &__name
       color: $light
       margin-left: 0
   .menu
@@ -409,7 +411,8 @@
     &-title
       font-size: 20px
       line-height: 25px
-      margin-bottom: 37px
+      margin-bottom: 20px
+      margin-top: 0
       &__strong
         font-size: 30px
         line-height: 38px
@@ -555,7 +558,7 @@
       width: 380px
       width: 100%
   .subscribe
-    width: 100%
+    width: 80%
   .activities
     &__title
       margin-bottom: 37px
@@ -633,6 +636,7 @@
       font-size: 18px
       &--inline
         margin-bottom: 20px
+        margin-left: 15px
       &--social
         margin-right: 0
         margin-bottom: 20px
@@ -645,6 +649,7 @@
         grid-row: 2
       &-links
         max-width: 85px
+        margin-left: 15px
     &__legal
       grid-row: 3
       grid-column: 1
@@ -690,7 +695,9 @@
     order: 2
   .activities__card--4
     order: 4
-
+  .search
+    &__input
+      font-size: 11px
 @media ( max-width: 556px )
   .footer__link-wrapper 
     grid-template-rows: 23px 46px 23px
@@ -742,6 +749,11 @@
     &__form
       width: 280px
       width: 100%
+  .subscribe
+    &__input
+      font-size: 12px
+    &__button
+      font-size: 12px
 @media (max-width: 334px)
   .footer__link-wrapper 
     grid-template-rows: 23px 90px 50px
