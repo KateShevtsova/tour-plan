@@ -511,7 +511,8 @@
         padding: 0
         width: 100%
     &-wrapper
-      grid-template-columns: 30% 40% auto
+      max-width: 500px
+      grid-template-columns: 1fr
     &__title
       font-size: 18px
       white-space: normal
@@ -528,7 +529,9 @@
   .footer__social-network
     margin-top: 12px
   .footer__additional
-   
+
+
+
 @media ( max-width: 576px )
   .container, .newsletter-wrapper 
     max-width: 500px
@@ -687,6 +690,11 @@
     order: 2
   .activities__card--4
     order: 4
+
+@media ( max-width: 556px )
+  .footer__link-wrapper 
+    grid-template-rows: 23px 46px 23px
+
 @media (max-width: 380px)
   .container
     max-width: 340px
@@ -721,6 +729,8 @@
       &-group
         max-width: 340px
         width: 100%
+  .footer__link-wrapper 
+    grid-template-rows: 23px 50px 50px
   .modal
     &__input
       height: 25px
@@ -732,6 +742,10 @@
     &__form
       width: 280px
       width: 100%
+@media (max-width: 334px)
+  .footer__link-wrapper 
+    grid-template-rows: 23px 90px 50px
+
 @media (max-width: 330px)
   .container
     max-width: 280px
@@ -866,7 +880,7 @@
       grid-row-gap: 25px
     &__link
       &-wrapper
-        grid-template-rows: 40px 37px 40px
+        grid-template-rows: 40px 90px 40px
     &__additional
       margin: -10px 0 10px 8px
     &__categories
