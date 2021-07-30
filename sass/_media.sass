@@ -1,3 +1,5 @@
+
+
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -60,7 +62,7 @@
     &__item
       &:hover
         color: $light
-    &__link, &__bottom-link
+    &__bottom-link
       background-image: linear-gradient(currentColor, currentColor)
       background-position: 0% 100%
       background-repeat: no-repeat
@@ -68,6 +70,14 @@
       transition: background-size .3s
       &:hover
         color: $light
+        background-size: 100% 2px
+    &__link
+      background-position: 0% 100%
+      background-repeat: no-repeat
+      background-size: 0% 2px
+      transition: background-size .3s
+      &:hover
+        color: red
         background-size: 100% 2px
   .first-tel, .second-tel, .third-tel
     &__tel
